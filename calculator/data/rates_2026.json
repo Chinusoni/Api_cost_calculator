@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "currency": "USD",
+    "model": "per_message",
+    "last_updated": "2026-04-01"
+  },
+  "utility_tiers": [
+    {"tier": 1, "min": 0,       "max": 80000,    "discount": 0.00},
+    {"tier": 2, "min": 80001,   "max": 750000,   "discount": 0.05},
+    {"tier": 3, "min": 750001,  "max": 2250000,  "discount": 0.10},
+    {"tier": 4, "min": 2250001, "max": 3000000,  "discount": 0.15},
+    {"tier": 5, "min": 3000001, "max": 6000000,  "discount": 0.20},
+    {"tier": 6, "min": 6000001, "max": null,     "discount": 0.25}
+  ],
+  "auth_tiers": [
+    {"tier": 1, "min": 0,        "max": 100000,   "discount": 0.00},
+    {"tier": 2, "min": 100001,   "max": 500000,   "discount": 0.05},
+    {"tier": 3, "min": 500001,   "max": 2000000,  "discount": 0.10},
+    {"tier": 4, "min": 2000001,  "max": 5000000,  "discount": 0.15},
+    {"tier": 5, "min": 5000001,  "max": 10000000, "discount": 0.20},
+    {"tier": 6, "min": 10000001, "max": null,     "discount": 0.25}
+  ],
+  "auth_international_countries": ["EG","IN","ID","MY","NG","PK","SA","ZA","AE"],
+  "markets": {
+    "IN": {"name": "India",          "marketing": 0.0118, "utility": 0.0014, "auth": 0.0014, "auth_intl": 0.0304},
+    "US": {"name": "United States",  "marketing": 0.0250, "utility": 0.0034, "auth": 0.0034, "auth_intl": null},
+    "CA": {"name": "Canada",         "marketing": 0.0250, "utility": 0.0034, "auth": 0.0034, "auth_intl": null},
+    "GB": {"name": "United Kingdom", "marketing": 0.0592, "utility": 0.0171, "auth": 0.0159, "auth_intl": null},
+    "DE": {"name": "Germany",        "marketing": 0.1365, "utility": 0.0456, "auth": 0.0456, "auth_intl": null},
+    "FR": {"name": "France",         "marketing": 0.1431, "utility": 0.0314, "auth": 0.0300, "auth_intl": null},
+    "BR": {"name": "Brazil",         "marketing": 0.0625, "utility": 0.0068, "auth": 0.0068, "auth_intl": null},
+    "MX": {"name": "Mexico",         "marketing": 0.0305, "utility": 0.0085, "auth": 0.0085, "auth_intl": null},
+    "CO": {"name": "Colombia",       "marketing": 0.0125, "utility": 0.0008, "auth": 0.0008, "auth_intl": null},
+    "AR": {"name": "Argentina",      "marketing": 0.0618, "utility": 0.0260, "auth": 0.0260, "auth_intl": null},
+    "AE": {"name": "UAE",            "marketing": 0.0499, "utility": 0.0157, "auth": 0.0157, "auth_intl": 0.0510},
+    "SA": {"name": "Saudi Arabia",   "marketing": 0.0455, "utility": 0.0107, "auth": 0.0107, "auth_intl": 0.0598},
+    "EG": {"name": "Egypt",          "marketing": 0.1073, "utility": 0.0036, "auth": 0.0036, "auth_intl": 0.0650},
+    "NG": {"name": "Nigeria",        "marketing": 0.0516, "utility": 0.0067, "auth": 0.0067, "auth_intl": 0.0750},
+    "ZA": {"name": "South Africa",   "marketing": 0.0379, "utility": 0.0076, "auth": 0.0076, "auth_intl": 0.0200},
+    "PK": {"name": "Pakistan",       "marketing": 0.0473, "utility": 0.0054, "auth": 0.0054, "auth_intl": 0.0750},
+    "ID": {"name": "Indonesia",      "marketing": 0.0411, "utility": 0.0250, "auth": 0.0250, "auth_intl": 0.1360},
+    "MY": {"name": "Malaysia",       "marketing": 0.0860, "utility": 0.0140, "auth": 0.0140, "auth_intl": 0.0418},
+    "TR": {"name": "Turkey",         "marketing": 0.0109, "utility": 0.0053, "auth": 0.0053, "auth_intl": null},
+    "ES": {"name": "Spain",          "marketing": 0.0509, "utility": 0.0166, "auth": 0.0166, "auth_intl": null},
+    "IT": {"name": "Italy",          "marketing": 0.0691, "utility": 0.0300, "auth": 0.0300, "auth_intl": null},
+    "RU": {"name": "Russia",         "marketing": 0.0802, "utility": 0.0400, "auth": 0.0400, "auth_intl": null},
+    "AU": {"name": "Australia",      "marketing": 0.0732, "utility": 0.0113, "auth": 0.0113, "auth_intl": null},
+    "JP": {"name": "Japan",          "marketing": 0.0732, "utility": 0.0113, "auth": 0.0113, "auth_intl": null},
+    "IL": {"name": "Israel",         "marketing": 0.0353, "utility": 0.0053, "auth": 0.0053, "auth_intl": null},
+    "DZ": {"name": "Algeria",        "marketing": 0.0225, "utility": 0.0040, "auth": 0.0040, "auth_intl": null}
+  },
+  "bsp_providers": {
+    "none":       {"name": "Direct / Cloud API (no BSP)", "model": "none",            "per_message_fee": 0.000, "markup_percent": 0.00, "platform_fee": 0.0},
+    "twilio":     {"name": "Twilio",                      "model": "flat_per_message", "per_message_fee": 0.005, "markup_percent": 0.00, "platform_fee": 0.0},
+    "360dialog":  {"name": "360dialog",                   "model": "flat_per_message", "per_message_fee": 0.005, "markup_percent": 0.00, "platform_fee": 49.0},
+    "gupshup":    {"name": "Gupshup",                     "model": "percent_markup",   "per_message_fee": 0.000, "markup_percent": 0.15, "platform_fee": 0.0},
+    "wati":       {"name": "WATI",                        "model": "percent_markup",   "per_message_fee": 0.000, "markup_percent": 0.20, "platform_fee": 49.0},
+    "interakt":   {"name": "Interakt",                    "model": "percent_markup",   "per_message_fee": 0.000, "markup_percent": 0.25, "platform_fee": 15.0},
+    "chatmaxima": {"name": "ChatMaxima",                  "model": "flat_platform",    "per_message_fee": 0.000, "markup_percent": 0.00, "platform_fee": 19.0},
+    "manychat":   {"name": "ManyChat",                    "model": "flat_platform",    "per_message_fee": 0.000, "markup_percent": 0.00, "platform_fee": 29.0}
+  }
+}
