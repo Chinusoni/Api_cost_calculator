@@ -1,17 +1,10 @@
-"""
-WSGI config for core project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
-"""
-
 import os
-
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
+# Replace 'your_inner_project_folder' with your actual folder name
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'your_inner_project_folder.settings')
 
 application = get_wsgi_application()
+
+# Vercel specifically looks for an object named 'app'
 app = application
